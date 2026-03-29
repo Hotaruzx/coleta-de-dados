@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    color: #e8efe9;
+    background:
+        radial-gradient(circle at top, rgba(73, 133, 122, 0.2), transparent 30%),
+        linear-gradient(160deg, #071114 0%, #0c1b20 45%, #030608 100%);
+    overflow-x: hidden;
+}
+
+.brilho-fundo {
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(100, 196, 170, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100, 196, 170, 0.05) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.destaque {
+    margin-bottom: 24px;
+    padding: 28px;
+    border: 1px solid rgba(128, 202, 184, 0.2);
+    background: rgba(5, 13, 16, 0.75);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+}
+
+.etiqueta,
+.codigo,
+.status,
+label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+}
+
+.etiqueta,
+.codigo {
+    color: #82d8c3;
+}
+
+.destaque h1 {
+    margin: 10px 0 14px;
+    font-size: clamp(2.2rem, 5vw, 4.6rem);
+    line-height: 0.95;
+    color: #f4faf7;
+    text-shadow: 0 0 20px rgba(98, 206, 181, 0.15);
+}
+
+.descricao {
+    max-width: 720px;
+    color: #b7c7c2;
+    line-height: 1.6;
+}
+
+.painel {
+    padding: 28px;
+    border: 1px solid rgba(128, 202, 184, 0.18);
+    background: rgba(6, 14, 17, 0.92);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.cabecalho-painel {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(128, 202, 184, 0.15);
+}
+
+.status {
+    color: #f0c674;
+}
+
+.formulario-anomalia {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.linha-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(128, 202, 184, 0.18);
+    background: rgba(10, 24, 28, 0.9);
+    color: #edf7f2;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #7f938d;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #7ad2bf;
+    box-shadow: 0 0 0 3px rgba(122, 210, 191, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.grupo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: #c7d4d0;
+}
+
+.grupo-checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: #7ad2bf;
+}
+
+.grupo-checkbox label {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.acoes-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    padding-top: 8px;
+}
+
+button {
+    padding: 14px 22px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.botao-primario {
+    background: linear-gradient(135deg, #6ccab6, #3d8d7d);
+    color: #041012;
+    box-shadow: 0 8px 24px rgba(80, 176, 156, 0.25);
+}
+
+.botao-primario:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+.botao-secundario {
+    border-color: rgba(128, 202, 184, 0.25);
+    background: transparent;
+    color: #dce8e4;
+}
+
+.botao-secundario:hover {
+    background: rgba(128, 202, 184, 0.08);
+}
+
+@media (max-width: 760px) {
+    .container {
+        padding: 28px 0;
+    }
+
+    .destaque,
+    .painel {
+        padding: 20px;
+    }
+
+    .cabecalho-painel,
+    .acoes-formulario,
+    .linha-formulario {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acoes-formulario button {
+        width: 100%;
+    }
+}

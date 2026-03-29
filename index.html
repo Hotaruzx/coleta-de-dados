@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbanshade | Registro de Anomalia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="brilho-fundo"></div>
+
+    <main class="container">
+        <section class="destaque">
+            <p class="etiqueta">Urbanshade Expeditionary Division</p>
+            <h1>Registro de Anomalia</h1>
+            <p class="descricao">
+                Preencha o relatorio abaixo para documentar qualquer evento fora do padrao
+                encontrado nas instalacoes, corredores submersos ou zonas de risco.
+            </p>
+        </section>
+
+        <section class="painel">
+            <div class="cabecalho-painel">
+                <p class="codigo">FORM-07A</p>
+                <p class="status">Status: Aguardando envio</p>
+            </div>
+
+            <form class="formulario-anomalia">
+                <div class="grupo-formulario">
+                    <label for="nome">Nome do agente</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="linha-formulario">
+                    <div class="grupo-formulario">
+                        <label for="setor">Setor</label>
+                        <select id="setor" name="setor" required>
+                            <option value="">Selecione</option>
+                            <option value="seguranca">Seguranca</option>
+                            <option value="engenharia">Engenharia</option>
+                            <option value="pesquisa">Pesquisa</option>
+                            <option value="mergulho">Mergulho</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="nivel">Nivel de risco</label>
+                        <select id="nivel" name="nivel" required>
+                            <option value="">Selecione</option>
+                            <option value="baixo">Baixo</option>
+                            <option value="medio">Medio</option>
+                            <option value="alto">Alto</option>
+                            <option value="critico">Critico</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="linha-formulario">
+                    <div class="grupo-formulario">
+                        <label for="data">Data do ocorrido</label required>
+                        <input type="date" id="data" name="data">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="local">Local da anomalia</label required>
+                        <input type="text" id="local" name="local" placeholder="Ex: Setor Hadal - Porta 3">
+                    </div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="tipo">Tipo de anomalia</label required>
+                    <select id="tipo" name="tipo">
+                        <option value="">Selecione</option>
+                        <option value="visual">Manifestacao visual</option>
+                        <option value="sonora">Fenomeno sonoro</option>
+                        <option value="biologica">Entidade biologica</option>
+                        <option value="estrutural">Falha estrutural</option>
+                        <option value="desconhecida">Origem desconhecida</option>
+                    </select>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="descricao">Descricao detalhada</label required>
+                    <textarea id="descricao" name="descricao" rows="6" placeholder="Descreva o que foi visto, ouvido ou registrado..."></textarea>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="acao">Acao tomada</label required>
+                    <textarea id="acao" name="acao" rows="4" placeholder="Informe qual procedimento foi realizado pela equipe..."></textarea>
+                </div>
+
+                <div class="grupo-checkbox">
+                    <input type="checkbox" id="confirmacao" name="confirmacao" required>
+                    <label for="confirmacao">Confirmo que as informacoes acima sao verdadeiras.</label>
+                </div>
+
+                <div class="acoes-formulario">
+                    <button type="reset" class="botao-secundario">Limpar</button>
+                    <button type="submit" class="botao-primario">Enviar relatorio</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
